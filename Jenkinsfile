@@ -1,12 +1,9 @@
 pipeline {
-    agent { docker { image 'ubuntu:latest' } }
+    agent docker { 'ubuntu:latest' }
     stages {
-        stage('build') {
+        stage('Startup Build Step') {
             steps {
                 sh 'gcc --version'
-                sh 'gcc -c src/main.c'
-                sh "gcc"
-                sh "./main"
             }
         }
     }
