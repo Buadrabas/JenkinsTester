@@ -1,9 +1,12 @@
 pipeline {
-    agent { docker { image 'python:3.11.5-alpine3.18' } }
+    agent { docker { image 'ubuntu:latest' } }
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'gcc --version'
+                sh 'gcc -c src/main.c'
+                sh "gcc"
+                sh "./main"
             }
         }
     }
