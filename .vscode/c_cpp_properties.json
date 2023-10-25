@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "clangArm",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "C:/msys64/ucrt64/bin/clang.exe",
+            "compilerArgs": [
+                "-c",
+                "-std=gnu99",
+                "-Wall",
+                "-Wextra"
+            ],
+            "intelliSenseMode": "windows-clang-x86"
+        }
+    ],
+    "version": 4
+}

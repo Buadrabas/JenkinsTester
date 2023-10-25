@@ -1,7 +1,7 @@
 pipeline {
-    agent docker { 'ubuntu:latest' }
+    agent {docker { 'ubuntu:latest' }}
     stages {
-        stage('Startup Build Step') {
+        stage('build') {
             steps {
                 sh 'gcc --version'
             }
