@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'clang --version'
+                sh 'clang-15 --version'
             }
         }
     }
