@@ -8,7 +8,7 @@ jobs:
       - run: sudo apt install clang
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
-      - run: clang -Wall -o build/main.out -c src/main.c
+      - run: clang -Wall -o build/main.out src/main.c
 
 
 workflows:
