@@ -9,9 +9,7 @@ jobs:
       - checkout
 
       - run:
-        name: Greeting
         command: echo Hello World.
 
       - run:
-        name: Print Time
         command: date
