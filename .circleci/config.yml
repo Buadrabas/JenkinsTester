@@ -7,9 +7,7 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-
       - run:
-        command: echo Hello World.
-
+          command: echo Hello World.
       - run:
-        command: date
+          command: date
