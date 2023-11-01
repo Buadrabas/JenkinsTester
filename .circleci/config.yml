@@ -1,13 +1,17 @@
-# CircleCI configuration file
-
 version: 2.1
+
 jobs:
-  build:
-    docker:
-      - image: debian:stretch
+  hello-job:
+    machine:
+      image: ubuntu-2204:2022.07.1
     steps:
-      - checkout
-      - run:
-          command: echo Hello World.
-      - run:
-          command: date
+      - run: sudo apt install clang
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
+      - run: clang -Wall -o build/main.out -c src/main.c
+
+
+workflows:
+  my-workflow:
+    jobs:
+      - hello-job
