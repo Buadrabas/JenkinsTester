@@ -1,0 +1,15 @@
+# CircleCI configuration file
+
+version 2.1
+
+jobs:
+  build:
+    machine: 
+      ubuntu-2204: 2023.10.1
+    steps:
+      -run: uname -a 
+      -run: apt list --installed
+      -run: sudo apt update
+      -run: sudo apt install clang -y
+      -run: clang -Weverything -o build/main.out src/main.c
+      -run: ./build/main.out
